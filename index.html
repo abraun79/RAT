@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Atendimento</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar Atendimento</h1>
+        <form action="registra_atendimento.php" method="post">
+            Técnico ID: <input type="text" name="tecnico_id"><br>
+            Cliente ID: <input type="text" name="cliente_id"><br>
+            Data: <input type="datetime-local" name="data"><br>
+            Serviço: 
+            <select name="modalidade_servico">
+                <option value="garantia">Garantia</option>
+                <option value="contrato">Contrato</option>
+                <option value="a cobrar">A Cobrar</option>
+                <option value="orcamento">Orçamento</option>
+            </select><br>
+            Descrição: <textarea name="descricao"></textarea><br>
+            Início do Atendimento: <input type="datetime-local" name="inicio"><br>
+            Fim do Atendimento: <input type="datetime-local" name="fim"><br>
+            <input type="submit" value="Registrar">
+        </form>
+        <form action="gerar_pdf.php" method="get">
+            <input type="submit" value="Gerar PDF">
+        </form>
+    </div>
+</body>
+</html>
+
